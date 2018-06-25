@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main {
+    max-width: 90%;
+    height: 100vh;
+    padding-top: 25px;
+    margin: 0 auto;
+    letter-spacing: 4px;
+}
+
+.userPhoto {
+    border-radius: 100%;
+    max-height: 75px;
+    max-width: 75px;
+    margin-right: 25px;
+}
+
+.greet {
+    text-align: center;
+}
+
+.time, 
+.greeting {
+    color: $white;
+    @include fontSize(50);
+}
+
+.date {
+    color: $lightGrey;
+    @include fontSize(40);
+}
