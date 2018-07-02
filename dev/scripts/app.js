@@ -4,7 +4,10 @@ import axios from 'axios';
 import firebase, { auth, provider } from './firebase.js';
 import Clock from './Clock';
 import Joke from './Joke';
+import News from './News';
 import Weather from './Weather';
+import Modal from 'react-modal';
+import Button from '@material-ui/core/Button'
 
 class App extends React.Component {
   constructor() {
@@ -24,9 +27,6 @@ class App extends React.Component {
         this.setState({ user });
       }
     });
-
-    // put function for API call in here
-    
   }
 
   logout() {
@@ -66,12 +66,18 @@ class App extends React.Component {
             <Clock
               userName={this.state.user.displayName}
             />
-            <Weather 
-            
-            />
+          </section>
+          <section>
+            <Weather/>
+          </section>
+          <section>
+            <News/>
           </section>
           <footer>
             <Joke/>
+              <p>Powered by
+                <a href="https://newsapi.org" target="_blank"> News API</a>, 
+                <a href="https://icanhazdadjoke.com/" target="_blank"> I Can Haz Dad Joke</a>, and <a href="https://openweathermap.org/API" target="_blank">Open Weather Map</a></p>
           </footer>
         </div>
         // end of div.main
