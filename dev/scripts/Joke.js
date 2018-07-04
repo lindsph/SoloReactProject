@@ -31,8 +31,8 @@ class Joke extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>"{this.state.joke}"</div>
+            <div className="jokeContainer">
+                <div className="joke">"{this.state.joke}"</div>
                 <button className="moreJokes" onClick={() => this.getJoke()}>Another?</button>
             </div>
         )

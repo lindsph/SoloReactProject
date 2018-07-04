@@ -1,9 +1,38 @@
 footer {
-    // display: flex;
-    // justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 35%;
+    margin-top: auto;
     color: $white;
+    @include fontSize(15);
+}
+
+.jokeContainer {
+    text-align: center;
+    div {
+        @include fontSize(18);
+        letter-spacing: 3px;
+    }
+}
+
+.errorMessage {
+    color: $pink;
+}
+
+button,
+.input {
+    border: 2px solid $white;
+    color: $white;
+    background: transparent;
+    padding: 12px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 14px;
+    width: 200px;    
+    height: 45px;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 

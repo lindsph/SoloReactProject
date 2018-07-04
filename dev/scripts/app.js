@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import firebase, { auth, provider } from './firebase.js';
+
 import Clock from './Clock';
 import Joke from './Joke';
 import News from './News';
 import Weather from './Weather';
+import Stocks from './Stocks';
+
 import Modal from 'react-modal';
 import Button from '@material-ui/core/Button'
 
@@ -68,16 +71,14 @@ class App extends React.Component {
             />
           </section>
           <section>
-            <Weather/>
-          </section>
-          <section>
-            <News/>
+            <Stocks/>
           </section>
           <footer>
-            <Joke/>
-              <p>Powered by
-                <a href="https://newsapi.org" target="_blank"> News API</a>, 
-                <a href="https://icanhazdadjoke.com/" target="_blank"> I Can Haz Dad Joke</a>, and <a href="https://openweathermap.org/API" target="_blank">Open Weather Map</a></p>
+            <div className="flex">
+                <Weather/>
+                <Joke/>
+                <News/>
+            </div>
           </footer>
         </div>
         // end of div.main
